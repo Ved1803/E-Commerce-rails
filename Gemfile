@@ -48,4 +48,6 @@ end
 
 gem 'rack-cors'
 gem 'activestorage'
-# In your Gemfile
+gem 'devise'
+gem 'devise-jwt'
+gem 'jsonapi-serializer'

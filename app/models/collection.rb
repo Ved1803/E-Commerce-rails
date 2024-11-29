@@ -1,6 +1,7 @@
 class Collection < ApplicationRecord
   has_one_attached :image
   # after_create :set_default_image
+  has_many :cart_items, dependent: :destroy
 
   def image_url
     Rails.application.routes.url_helpers.url_for(image) if image.attached?
