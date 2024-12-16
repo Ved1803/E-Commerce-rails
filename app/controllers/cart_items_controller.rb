@@ -1,6 +1,6 @@
 class CartItemsController < ApplicationController
   before_action :set_cart
-  before_action :find_cart_item, only: %i[show update]
+  before_action :find_cart_item, only: %i[show update destroy]
   
   def create
     cart_item = @cart.cart_items.find_or_initialize_by(collection_id: params[:collection_id])

@@ -42,6 +42,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -51,3 +52,4 @@ gem 'activestorage'
 gem 'devise'
 gem 'devise-jwt'
 gem 'jsonapi-serializer'
+gem 'stripe'
