@@ -11,10 +11,12 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-  
+
   resources :collections
   resource :cart, only: [:show] do
     resources :cart_items, only: [:create, :show, :index, :destroy, :update]
   end
+  resources :orders, only: [:create, :show]
+  resources :order_items, only: [:index]
   post 'payments/create_payment_intent', to: 'payments#create_payment_intent'
 end

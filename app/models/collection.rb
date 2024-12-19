@@ -10,7 +10,6 @@ class Collection < ApplicationRecord
   private
 
   def set_default_image
-    # debugger
     return if image.attached?
 
     default_image_path = Rails.root.join('Skype_Picture_2024_05_07T14_12_58_220Z.jpeg')
